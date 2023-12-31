@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+    transition: background-color 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #94a3b8;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B8B8C2;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #828284;
+}
