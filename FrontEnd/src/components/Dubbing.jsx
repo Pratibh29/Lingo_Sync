@@ -72,9 +72,7 @@ const Dubbing = () => {
       const url = URL.createObjectURL(blob);
       setDownloadUrl(url);
       setDownloadAvailable(true);
-
       setStatusMessage("File conversion successful.");
-      notifySuccess();
     } catch (error) {
       console.error("Conversion error:", error);
       setStatusMessage("Conversion failed. Please try again.");
@@ -182,7 +180,7 @@ const Dubbing = () => {
                   Converting Video...
                 </p>
               )}
-              {!isLoading && !downloadUrl && (
+              {!isLoading && downloadUrl && (
                 <p className="text-center  mt-4 text-red-600 font-semibold">
                   {statusMessage}
                 </p>

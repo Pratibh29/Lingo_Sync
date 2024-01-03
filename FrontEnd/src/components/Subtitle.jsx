@@ -77,7 +77,6 @@ const Subtitle = () => {
       setDownloadUrl(url);
       setDownloadAvailable(true);
       setStatusMessage("Subtitles generated successfully.");
-      notifySuccess();
     } catch (error) {
       console.error("Subtitle generation error:", error);
       setStatusMessage("Subtitle generation failed. Please try again.");
@@ -189,7 +188,7 @@ const Subtitle = () => {
                   Generating subtitles...
                 </p>
               )}
-              {statusMessage && !isLoading && (
+              {!isLoading && downloadUrl && (
                 <p className="text-center mt-4 text-red-600 font-semibold">
                   {statusMessage}
                 </p>
